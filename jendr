@@ -1,0 +1,16 @@
+#!/usr/bin/env python
+
+# Function imports
+#
+from sys import argv
+from audacious import *
+import subprocess
+import numpy
+
+bush = Speech(argv[1])
+
+bush.description()
+
+print bush.gender(20,2)
+
+subprocess.call(['rm', bush.wavname])
